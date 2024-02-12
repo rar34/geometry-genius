@@ -1,14 +1,9 @@
 function triangleAreaCalculate(){
-    const triangleBaseInput = document.getElementById('triangle-base');
-    const triangleBaseValue = triangleBaseInput.value;
-    const triangleBase = parseFloat(triangleBaseValue);
+    const base = getInputValueById('triangle-base');
     // console.log(triangleBase)
+    const height = getInputValueById('triangle-height');
 
-    const triangleHeightInput = document.getElementById('triangle-height');
-    const triangleHeightValue = triangleHeightInput.value;
-    const triangleHeight = parseFloat(triangleHeightValue);
-
-    const triangleArea = 0.5 * triangleBase * triangleHeight;
+    const triangleArea = 0.5 * base * height;
     // console.log(triangleArea);
     if(isNaN(triangleArea) || triangleArea <0){
         return alert('Please enter valid base and height')
