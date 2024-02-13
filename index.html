@@ -14,13 +14,13 @@
   <header>
 
   </header>
-  <main class="m-24">
+  <main class="m-5 lg:m-24">
     <!-- main content container         -->
-    <div class="flex gap-6">
+    <div class="flex flex-col lg:flex-row gap-6">
       <!-- shape card container -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 flex-1">
         <!-- Triangle container -->
-        <div class="card w-96 bg-base-100 border-2 border-gray-600 p-5 text-center">
+        <div class="card  bg-base-100 border-2 border-gray-600 p-5 text-center hover:bg-rose-200">
           <figure><img src="./images/triangle.png" alt="Triangle" />
           </figure>
           <div class="card-body">
@@ -36,68 +36,89 @@
           </div>
         </div>
         <!-- Rectangle container -->
-        <div class="card w-96 bg-base-100 shadow-xl">
-          <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
+        <div class="card  bg-base-100 border-2 border-gray-600 p-5 text-center">
+          <figure><img src="./images/rectangle.png" alt="Rectangle" />
           </figure>
           <div class="card-body">
-            <h2 class="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <h2 class="text-3xl font-bold">Rectangle</h2>
+            <p>Area (A) = w x l </p>
+            <div>
+              <input id="rectangle-base" class="w-24 p-3 bg-gray-200 rounded-md" type="text" placeholder="w"> <span>cm</span>
+              <input id="rectangle-length" class="w-24 p-3 bg-gray-200 rounded-md" type="text" placeholder="l"> <span>cm</span>
+            </div>
             <div class="card-actions justify-end">
-              <button class="btn btn-primary">Buy Now</button>
+              <button onclick="rectangleAreaCalculate()" class="btn btn-primary w-full">Calculate</button>
             </div>
           </div>
         </div>
         <!-- Parallelogram container -->
-        <div class="card w-96 bg-base-100 shadow-xl">
-          <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
+        <div class="card  bg-base-100 border-2 border-gray-600 p-5 text-center">
+          <figure><img src="./images/parallelogram.png" alt="Parallelogram" />
           </figure>
           <div class="card-body">
-            <h2 class="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <h2 class="text-3xl font-bold">Parallelogram</h2>
+            <p>Area (A) = b x h </p>
+            <div>
+              <input id="parallelogram-base" class="w-24 p-3 bg-gray-200 rounded-md" type="text" placeholder="b"> <span>cm</span>
+              <input id="parallelogram-height" class="w-24 p-3 bg-gray-200 rounded-md" type="text" placeholder="l"> <span>cm</span>
+            </div>
             <div class="card-actions justify-end">
-              <button class="btn btn-primary">Buy Now</button>
+              <button onclick="parallelogramAreaCalculate()" class="btn btn-primary w-full">Calculate</button>
             </div>
           </div>
         </div>
         <!-- Rhombus container -->
-        <div class="card w-96 bg-base-100 shadow-xl">
-          <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
+        <div class="card  bg-base-100 border-2 border-gray-600 p-5 text-center">
+          <figure><img src="./images/rhombus.png" alt="Rhombus" />
           </figure>
           <div class="card-body">
-            <h2 class="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <h2 class="text-3xl font-bold">Rhombus</h2>
+            <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub> </p>
+            <div>
+              <input id="major-diagonal" class="w-24 p-3 bg-gray-200 rounded-md" type="text" placeholder="d1"> <span>cm</span>
+              <input id="minor-diagonal" class="w-24 p-3 bg-gray-200 rounded-md" type="text" placeholder="d2"> <span>cm</span>
+            </div>
             <div class="card-actions justify-end">
-              <button class="btn btn-primary">Buy Now</button>
+              <button onclick="rhombusAreaCalc()" class="btn btn-primary w-full">Calculate</button>
             </div>
           </div>
         </div>
-        <!-- Pentagon container -->
-        <div class="card w-96 bg-base-100 shadow-xl">
-          <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
+        <!-- Triangle container -->
+        <div class="card  bg-base-100 border-2 border-gray-600 p-5 text-center">
+          <figure><img src="./images/triangle.png" alt="Triangle" />
           </figure>
           <div class="card-body">
-            <h2 class="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <h2 class="text-3xl font-bold">Triangle</h2>
+            <p>Area (A) = 0.5 * b * h </p>
+            <div>
+              <input id="triangle-base" class="w-24 p-3 bg-gray-200 rounded-md" type="text" placeholder="b"> <span>cm</span>
+              <input id="triangle-height" class="w-24 p-3 bg-gray-200 rounded-md" type="text" placeholder="h"> <span>cm</span>
+            </div>
             <div class="card-actions justify-end">
-              <button class="btn btn-primary">Buy Now</button>
+              <button onclick="triangleAreaCalculate()" class="btn btn-primary w-full">Calculate</button>
             </div>
           </div>
         </div>
-        <!-- Ellipse container -->
-        <div class="card w-96 bg-base-100 shadow-xl">
-          <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
+        <!-- Triangle container -->
+        <div class="card  bg-base-100 border-2 border-gray-600 p-5 text-center">
+          <figure><img src="./images/triangle.png" alt="Triangle" />
           </figure>
           <div class="card-body">
-            <h2 class="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <h2 class="text-3xl font-bold">Triangle</h2>
+            <p>Area (A) = 0.5 * b * h </p>
+            <div>
+              <input id="triangle-base" class="w-24 p-3 bg-gray-200 rounded-md" type="text" placeholder="b"> <span>cm</span>
+              <input id="triangle-height" class="w-24 p-3 bg-gray-200 rounded-md" type="text" placeholder="h"> <span>cm</span>
+            </div>
             <div class="card-actions justify-end">
-              <button class="btn btn-primary">Buy Now</button>
+              <button onclick="triangleAreaCalculate()" class="btn btn-primary w-full">Calculate</button>
             </div>
           </div>
         </div>
+       
       </div>
       <!-- area calculation container -->
-      <div id="areaCalculationContainer" class="w-96 border-2 border-gray-700 rounded-lg p-4 text-center">
+      <div id="areaCalculationContainer" class=" border-2 border-gray-700 rounded-lg p-4 text-center">
         <h3 class="text-3xl mb-6">Area calculation</h3>
       </div>
     </div>
@@ -105,6 +126,10 @@
 
   <script src="scripts/getInputValue.js"></script>
   <script src="scripts/triangle-calculate.js"></script>
+  <script src="scripts/display.js"></script>
+  <script src="scripts/rectangleArea.js"></script>
+  <script src="scripts/parallelogram.js"></script>
+  <script src="scripts/rhombusArea.js"></script>
 </body>
 
 </html>
